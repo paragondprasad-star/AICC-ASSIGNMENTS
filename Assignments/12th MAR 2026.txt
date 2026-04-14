@@ -1,0 +1,22 @@
+Decision Tree on Paper: Draw a decision tree predicting whether you should play outside.
+
+Example Factors (Features)
+
+-Weather (Sunny / Rainy / Cloudy)
+-Temperature (Hot / Mild / Cool)
+-Humidity (High / Normal)
+
+Output (Label):
+-Play Outside → Yes / No
+
+Decision Tree:
+
+                Weather
+              /    |     \
+          Sunny  Rainy  Cloudy
+           /                \
+     Humidity            Play = Yes
+       /    \
+   High    Normal
+  Play=No  Play=Yes
+

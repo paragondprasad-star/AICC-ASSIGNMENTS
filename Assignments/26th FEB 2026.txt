@@ -1,0 +1,36 @@
+Data Doctor: Clean a dataset by handling missing values, removing duplicates, standardizing text, and explain why cleaning matters.
+
+Program:
+
+import pandas as pd
+
+# Sample dataset
+data = {
+    "Name": ["Alice", "Bob", "Alice", "Charlie", None],
+    "Age": [23, 25, 23, None, 30],
+    "City": ["New York", "los angeles", "New York", "Chicago", "chicago"]
+}
+
+df = pd.DataFrame(data)
+
+print("Original Dataset:")
+print(df)
+
+# 1. Handle missing values
+df["Name"] = df["Name"].fillna("Unknown")
+df["Age"] = df["Age"].fillna(df["Age"].mean())
+
+# 2. Remove duplicate rows
+df = df.drop_duplicates()
+
+# 3. Standardize text (make city names lowercase)
+df["City"] = df["City"].str.lower()
+
+print("\nCleaned Dataset:")
+print(df)
+
+Data Cleaning Matters Because:
+1.Improves accuracy of analysis and machine learning models.
+2.Removes errors like duplicates or missing data.
+3.Ensures consistency in text formats (e.g., “Chicago” and “chicago”).
+4.Makes datasets reliable for decision-making.

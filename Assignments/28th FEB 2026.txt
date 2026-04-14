@@ -1,0 +1,40 @@
+Storytelling with Graphs: Create bar chart, pie chart, histogram and write a short data story explaining trends.
+
+Program:
+
+import matplotlib.pyplot as plt
+
+# Data
+categories = ['1-2 hrs', '2-3 hrs', '3-4 hrs', '4-5 hrs', '5+ hrs']
+students = [8, 12, 15, 10, 5]
+
+# 1. Bar Chart
+plt.bar(categories, students)
+plt.title("Students Study Hours (Bar Chart)")
+plt.xlabel("Study Hours")
+plt.ylabel("Number of Students")
+plt.show()
+
+# 2. Pie Chart
+plt.pie(students, labels=categories, autopct='%1.1f%%')
+plt.title("Study Hours Distribution (Pie Chart)")
+plt.show()
+
+# 3. Histogram
+data = [1,2,2,3,3,3,4,4,4,5,2,3,4,1,2,3,4,5]
+plt.hist(data, bins=5)
+plt.title("Study Hours Histogram")
+plt.xlabel("Study Hours")
+plt.ylabel("Frequency")
+plt.show()
+
+
+The output graph show how many hours students study daily.
+1.The bar chart shows that most students study 3–4 hours per day, while fewer students study more than 5 hours.
+2.The pie chart shows that the largest portion of students fall in the 3–4 hour category, indicating moderate study habits.
+3.The histogram shows the distribution of study hours, where most values cluster around 3–4 hours.
+
+Overall, the data suggests that the majority of students maintain a balanced study routine, with relatively fewer students studying either very little or very long hours.
+
+
+

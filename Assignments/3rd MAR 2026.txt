@@ -1,0 +1,32 @@
+Build Your First Dataset: Create a dataset (e.g., study hours vs marks), identify features & labels, predict relationship.
+
+Dataset: Study Hours vs Marks
+
+| Student | Study Hours | Marks (%) |
+| ------- | ----------- | --------- |
+| 1       | 1           | 40        |
+| 2       | 2           | 50        |
+| 3       | 3           | 60        |
+| 4       | 4           | 70        |
+| 5       | 5           | 80        |
+| 6       | 6           | 85        |
+| 7       | 7           | 90        |
+
+1. Features
+
+Features are the input variables used to make predictions.
+Feature in this dataset:
+Study Hours
+
+2. Label
+
+Label is the output or target value that we want to predict.
+Label in this dataset:
+Marks (%)
+
+3. Predicted Relationship
+
+There is a positive relationship between study hours and marks.
+As study hours increase, marks also increase.
+
+This means students who study more hours tend to score higher marks. A Machine Learning model can use this dataset to predict marks based on study hours.

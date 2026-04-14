@@ -1,0 +1,36 @@
+Build a Text Cleaner: Write code to remove punctuation, lowercase text, remove stopwords and test it.
+
+Program:
+
+import string
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+# Sample text
+text = "Hello!!! This is a simple TEXT cleaner, and it works very well :)"
+
+# 1. Convert to lowercase
+text = text.lower()
+
+# 2. Remove punctuation
+text = text.translate(str.maketrans('', '', string.punctuation))
+
+# 3. Remove stopwords
+words = text.split()
+cleaned_words = [word for word in words if word not in ENGLISH_STOP_WORDS]
+
+# Final cleaned text
+cleaned_text = " ".join(cleaned_words)
+
+print("Original Text:")
+print("Hello!!! This is a simple TEXT cleaner, and it works very well :)")
+
+print("\nCleaned Text:")
+print(cleaned_text)
+
+
+Example Output:
+Original Text:
+Hello!!! This is a simple TEXT cleaner, and it works very well :)
+
+Cleaned Text:
+hello simple text cleaner works

@@ -1,0 +1,32 @@
+Dataset Detective: Load a dataset, display top rows, find highest value column, count missing values, share 5 insights.
+
+Program:
+
+import pandas as pd
+
+# Load dataset (example: CSV file)
+df = pd.read_csv("data.csv")
+
+# Display first 5 rows
+print("Top 5 Rows:")
+print(df.head())
+
+# Select only numeric columns
+numeric_cols = df.select_dtypes(include=['number'])
+
+# Find column with highest mean
+highest_column = numeric_cols.mean().idxmax()
+
+print("\nColumn with Highest Average Value:", highest_column)
+
+print("\nMissing Values in Each Column:")
+print(df.isnull().sum())
+
+
+Insights:
+
+1.The dataset contains both numeric and non-numeric columns.
+2.The column with the highest average value is (column_name).
+3.Some columns contain missing values which need cleaning.
+4.Numeric columns vary significantly in their mean values.
+5.Data preprocessing (handling null values) is required before analysis.

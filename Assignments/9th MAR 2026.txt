@@ -1,0 +1,46 @@
+House Price Predictor: Train a Linear Regression model, predict prices, and test with new input.
+
+Example Dataset:
+| House Size (sq ft) | Price ($) |
+| ------------------ | --------- |
+| 800                | 150000    |
+| 1000               | 180000    |
+| 1200               | 210000    |
+| 1500               | 260000    |
+| 1800               | 300000    |
+| 2000               | 340000    |
+
+-Feature (Input): House Size
+-Label (Output): House Price
+
+Program:
+
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Dataset
+X = np.array([800,1000,1200,1500,1800,2000]).reshape(-1,1)
+y = np.array([150000,180000,210000,260000,300000,340000])
+
+# Create and train model
+model = LinearRegression()
+model.fit(X,y)
+
+# Predict price for new house
+new_size = np.array([[1600]])
+predicted_price = model.predict(new_size)
+
+print("Predicted House Price:", predicted_price[0])
+
+
+Testing With New Input:
+
+If we give 1600 sq ft as input:
+
+Predicted Output:
+The model predicts the approximate house price based on the relationship learned from the dataset.
+
+Example output:
+Predicted House Price: 275000
+
+

@@ -1,0 +1,61 @@
+Customer Segmentation: Perform K-Means clustering on a mall dataset and describe customer groups.
+
+Example Dataset:
+| Customer | Annual Income (k$) | Spending Score |
+| -------- | ------------------ | -------------- |
+| 1        | 15                 | 39             |
+| 2        | 16                 | 81             |
+| 3        | 17                 | 6              |
+| 4        | 18                 | 77             |
+| 5        | 19                 | 40             |
+| 6        | 20                 | 76             |
+| 7        | 21                 | 6              |
+| 8        | 22                 | 94             |
+
+Program:
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+# Dataset (Income, Spending Score)
+data = np.array([
+    [15,39],
+    [16,81],
+    [17,6],
+    [18,77],
+    [19,40],
+    [20,76],
+    [21,6],
+    [22,94]
+])
+
+# Apply K-Means
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(data)
+
+labels = kmeans.labels_
+
+# Plot clusters
+plt.scatter(data[:,0], data[:,1], c=labels)
+plt.xlabel("Annual Income")
+plt.ylabel("Spending Score")
+plt.title("Customer Segmentation using K-Means")
+plt.show()
+
+
+Customer Groups:
+
+After clustering, customers may be grouped like this:
+
+1.High Income – High Spending
+Premium customers
+Target for luxury products
+
+2.Low Income – High Spending
+Impulsive buyers
+Good for promotional offers
+
+3.Low Spending Customers
+Less engaged shoppers
+Need marketing strategies to attract them

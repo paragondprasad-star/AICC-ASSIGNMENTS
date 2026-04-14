@@ -1,0 +1,31 @@
+ML Idea Generator: Suggest ML problems in college, healthcare, shopping and describe input → output.
+
+1. College – Student Performance Prediction
+-Problem: Predict whether a student will pass or fail.
+-Input: Attendance, internal marks, assignment scores, study hours.
+-Output: Pass / Fail prediction or final grade.
+
+2. Healthcare – Disease Risk Prediction
+-Problem: Predict the risk of diseases such as diabetes.
+-Input: Age, weight, blood pressure, glucose level, family medical history.
+-Output: Probability of having the disease (Low / Medium / High risk).
+
+3. Shopping – Product Recommendation System
+-Problem: Recommend products to customers based on their preferences.
+-Input: User purchase history, search history, product ratings.
+-Output: List of recommended products.
+
+4. College – Attendance Monitoring System
+-Problem: Detect students with low attendance.
+-Input: Daily attendance records of students.
+-Output: Alert or prediction of students at risk of shortage.
+
+5. Healthcare – Hospital Readmission Prediction
+-Problem: Predict if a patient might be readmitted to the hospital.
+-Input: Patient medical history, treatment details, age, previous visits.
+-Output: Likelihood of readmission (Yes / No or percentage).
+
+6. Shopping – Customer Spending Prediction
+-Problem: Predict how much a customer will spend.
+-Input: Past purchases, browsing behavior, frequency of visits.
+-Output: Estimated spending amount.

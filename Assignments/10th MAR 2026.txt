@@ -1,0 +1,92 @@
+Spam Classifier Thinking: Design a spam detection system: features, data needed, possible mistakes.
+
+
+1.Features (Inputs for the Model): 
+Features are the characteristics used to detect spam messages.
+
+Examples of features:
+
+Keyword frequency (words like free, win, offer, prize, money).
+Number of links in the message.
+Sender email address (unknown or suspicious sender).
+Message length.
+Use of capital letters (e.g., “WIN NOW!!!”).
+Special characters such as !!!, $, %%.
+Attachment presence in emails.
+
+These features help the model understand patterns commonly found in spam messages.
+
+2.Data Needed:
+To train the spam classifier, we need a labeled dataset of messages.
+
+Example dataset:
+
+Message	Label
+"You won a free iPhone! Click here"	Spam
+"Meeting at 4 PM today"	Not Spam
+"Limited time offer! Buy now!"	Spam
+"Your assignment is due tomorrow"	Not Spam
+
+The dataset must include:
+
+Many spam messages
+Many normal messages
+
+This helps the model learn the difference.
+
+3.Possible Mistakes:
+
+The spam detection system can make two types of errors:
+
+-False Positive
+A normal message is classified as spam.
+Example:
+Message: “Free parking available in college today”
+Classified as: Spam (incorrect)
+
+-False Negative
+A spam message is classified as normal.
+Example:
+Message: “Claim your reward now by clicking this link”
+Classified as: Not Spam (incorrect)
+
+
+ Program:
+
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+# Sample dataset
+messages = [
+    "Win a free iPhone now",
+    "Limited time offer buy now",
+    "Meeting at 3 pm today",
+    "Your assignment is due tomorrow",
+    "Claim your free prize",
+    "Let's study for the exam"
+]
+
+labels = ["Spam", "Spam", "Not Spam", "Not Spam", "Spam", "Not Spam"]
+
+# Convert text into numbers
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(messages)
+
+# Train model
+model = MultinomialNB()
+model.fit(X, labels)
+
+# Test with new message
+new_message = ["Free offer just for you"]
+new_X = vectorizer.transform(new_message)
+
+prediction = model.predict(new_X)
+
+print("Message:", new_message[0])
+print("Prediction:", prediction[0])
+
+Example Output:
+Message: Free offer just for you
+Prediction: Spam
+
+

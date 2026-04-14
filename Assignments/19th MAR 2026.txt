@@ -1,0 +1,40 @@
+Mini Project Proposal: Submit a 1-page proposal with problem, dataset, algorithm, expected output.
+
+Mini Project Proposal:
+
+Title: Student Performance Prediction System
+
+1. Problem Statement: Many students struggle to understand how their study habits affect their academic performance. There is a need for a system that can predict student marks based on study-related factors and help them improve.
+
+2. Dataset: The dataset will contain information about students such as:
+-Study hours per day
+-Attendance percentage
+-Assignment scores
+-Previous exam marks
+
+Example:
+| Study Hours | Attendance | Assignment Score | Marks |
+| ----------- | ---------- | ---------------- | ----- |
+| 2           | 75%        | 60               | 55    |
+| 4           | 85%        | 70               | 65    |
+| 6           | 90%        | 80               | 78    |
+
+Features (Inputs): Study hours, attendance, assignment score
+Label (Output): Final marks
+
+3. Algorithm:
+The project will use Linear Regression because:
+
+-It is simple and easy to implement
+-It works well for predicting continuous values like marks
+-It shows the relationship between study factors and performance
+
+4. Expected Output:
+
+-Predicted marks based on input values
+-Understanding of how each factor affects performance
+-Helps students plan better study strategies
+
+Example:
+Input → Study Hours = 5, Attendance = 85%, Assignment = 75
+Output → Predicted Marks ≈ 70%

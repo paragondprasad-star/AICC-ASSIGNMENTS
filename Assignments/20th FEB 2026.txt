@@ -1,0 +1,32 @@
+NumPy Speed Test: Compare Python lists vs NumPy arrays with 1M numbers, measure execution time, write 3 observations.
+
+Program:
+
+import numpy as np
+import time
+
+# Create 1 million numbers
+size = 1000000
+
+# Python list
+py_list = list(range(size))
+
+# NumPy array
+np_array = np.arange(size)
+
+# Time for Python list
+start = time.time()
+py_result = [x * 2 for x in py_list]
+end = time.time()
+print("Python list time:", end - start)
+
+# Time for NumPy array
+start = time.time()
+np_result = np_array * 2
+end = time.time()
+print("NumPy array time:", end - start)
+
+Observations:
+1. NumPy is faster than Python lists because it uses optimized C-based operations.
+2. NumPy performs vectorized operations, avoiding explicit loops.
+3. NumPy arrays use less memory and are more efficient for large data.

@@ -1,0 +1,47 @@
+Student Data Manager: Store data for 5 students using dictionaries, print topper, class average, and assign grades.
+
+Program:
+
+# Store data for 5 students using dictionaries
+students = [
+    {"name": "Rahul", "marks": 85},
+    {"name": "Sneha", "marks": 92},
+    {"name": "Arjun", "marks": 76},
+    {"name": "Meena", "marks": 88},
+    {"name": "Kiran", "marks": 69}
+]
+
+# Function to assign grade
+def assign_grade(marks):
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    else:
+        return "F"
+
+# Find topper
+topper = students[0]
+for student in students:
+    if student["marks"] > topper["marks"]:
+        topper = student
+
+# Calculate class average
+total = 0
+for student in students:
+    total += student["marks"]
+
+average = total / len(students)
+
+# Display results
+print("----- Student Details -----")
+for student in students:
+    grade = assign_grade(student["marks"])
+    print(f"Name: {student['name']}, Marks: {student['marks']}, Grade: {grade}")
+
+print("\nTopper:", topper["name"], "-", topper["marks"])
+print("Class Average:", average)

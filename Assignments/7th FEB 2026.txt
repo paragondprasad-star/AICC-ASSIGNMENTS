@@ -1,0 +1,30 @@
+Create a strong code for password authentication using python.
+
+Program:
+
+import hashlib
+import os
+
+# Function to hash password
+def hash_password(password):
+    salt = os.urandom(16)  # random salt
+    hashed = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)
+    return salt, hashed
+
+# Function to verify password
+def verify_password(salt, stored_hash, password):
+    new_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)
+    return new_hash == stored_hash
+
+# Register
+password = input("Create password: ")
+salt, stored_hash = hash_password(password)
+print("Password stored securely!")
+
+# Login
+login = input("Enter password to login: ")
+
+if verify_password(salt, stored_hash, login):
+    print("Login successful!")
+else:
+    print("Incorrect password!")

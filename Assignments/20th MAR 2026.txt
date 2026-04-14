@@ -1,0 +1,73 @@
+Text Challenges: Collect 20 messy sentences and identify slang, emojis, typos; explain preprocessing needed.
+
+Messy Sentences with Issues:
+
+| No. | Sentence                    | Issues Identified           |
+| --- | --------------------------- | --------------------------- |
+| 1   | Hey bro, u coming tmrw?     | Slang (u, tmrw)             |
+| 2   | LOL 😂 that was funny!!!    | Slang + Emoji + punctuation |
+| 3   | I luv this song sooo much   | Slang + repetition          |
+| 4   | Plz send me the notes asap  | Slang (plz, asap)           |
+| 5   | This is amazng              | Typo (amazing)              |
+| 6   | OMG!! what is this??        | Slang + punctuation         |
+| 7   | gud mrng everyone           | Slang + typo                |
+| 8   | I can't w8 for the party 🎉 | Slang + emoji               |
+| 9   | thnx for ur help            | Slang                       |
+| 10  | dis movie is lit 🔥         | Slang + emoji               |
+| 11  | I will b there in 5 mins    | Slang                       |
+| 12  | wat are you doing??         | Typo                        |
+| 13  | soo tired rn 😴             | Slang + emoji               |
+| 14  | pls hlp me                  | Slang + typo                |
+| 15  | best day everrrr!!!         | repetition                  |
+| 16  | I dont like this            | Missing apostrophe          |
+| 17  | heyyy!!! how r u?           | repetition + slang          |
+| 18  | send d file now             | Slang                       |
+| 19  | okkkk got it 👍             | repetition + emoji          |
+| 20  | where r u now???            | Slang + punctuation         |
+
+
+Types of Problems:
+
+1. Slang / Abbreviations
+Examples: u → you, plz → please, asap → as soon as possible
+
+2. Emojis:
+Examples: 😂, 🔥, 👍
+These may need to be removed or converted to meaning (e.g., 😂 → happy)
+
+3. Typos / Spelling Errors
+Examples: amazng → amazing, wat → what
+
+4. Repeated Characters
+Examples: sooo → so, okkk → ok
+
+5. Extra Punctuation
+Examples: !!!, ???
+
+
+Preprocessing Steps:
+
+To clean the data before using it in ML:
+
+1.Convert to lowercase
+"Hello" → "hello"
+
+2.Remove or replace emojis
+😂 → "happy"
+
+3.Expand slang/short forms
+"u" → "you", "tmrw" → "tomorrow"
+
+4.Correct spelling mistakes
+"amazng" → "amazing"
+
+5.Remove repeated characters
+"soooo" → "so"
+
+6.Remove punctuation
+"!!!" → ""
+
+7.Tokenization (split words)
+"I love ML" → ["I", "love", "ML"]
+
+

@@ -1,0 +1,22 @@
+AI Around Me - List 10 real-life AI applications you use daily and explain how ML might work behind each in 1–2 lines.
+
+1.Google Search: Uses ML to rank web pages by understanding keywords, user intent, and past search behavior to show the most    relevant results.
+
+2.YouTube Recommendations: ML analyzes videos you watch, like, or skip and compares them with similar users to recommend new videos.
+
+3.Smartphone Face Unlock: Uses ML-based facial recognition to learn and match unique facial features for secure authentication.
+
+4.Google Maps Navigation: ML predicts traffic conditions by analyzing real-time location data from users and historical traffic patterns.
+
+5.Voice Assistants (Google Assistant / Siri): ML models process speech, convert it to text, understand intent, and generate accurate responses.
+
+6.Email Spam Filter: ML classifies emails as spam or safe by learning from patterns in sender details, keywords, and past spam reports.
+
+7.Instagram / Facebook Feed: ML ranks posts based on your interactions (likes, comments, shares) to show content you’re most likely to engage with.
+
+8.Netflix / OTT Recommendations: ML studies viewing history, ratings, and watch time to suggest movies and shows you may like.
+
+9.Online Shopping (Amazon / Flipkart): ML recommends products based on browsing history, previous purchases, and similar user behavior.
+
+10.Keyboard Autocorrect & Predictive Text: ML learns typing habits and common word patterns to predict the next word and correct spelling errors.
+
