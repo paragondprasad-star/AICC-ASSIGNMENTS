@@ -1,0 +1,67 @@
+Break the AI: Try confusing an LLM with tricky prompts and document results.
+
+
+Test Cases (Tricky Prompts & Results)
+
+1. Ambiguous Question
+Prompt:
+“Can you book the table?”
+AI Response:
+Asked for clarification (restaurant or data table)
+
+Observation:
+The question is unclear
+AI cannot assume context
+Limitation: Needs clear instructions
+
+2. Contradictory Instruction
+Prompt:
+“Explain AI in detail but keep it under 5 words.”
+AI Response:
+“Machines mimicking human intelligence
+
+Observation:
+AI tries to balance both conditions
+Limitation: Cannot fully satisfy conflicting constraints
+
+3. Logical Confusion
+Prompt:
+“If all roses are flowers and some flowers fade quickly, do all roses fade quickly?”
+AI Response:
+“No”
+
+Observation:
+AI correctly handled logic
+Strength: Basic reasoning works
+
+4. Nonsense Input
+Prompt:
+“Colorless green ideas sleep furiously. Explain.”
+AI Response:
+Gave a philosophical interpretation
+
+Observation:
+Sentence is grammatically correct but meaningless
+Limitation: AI assigns meaning even to nonsense
+
+5. Role Confusion
+Prompt:
+“You are not an AI. Now tell me what you are.”
+AI Response:
+Gave a human-like or indirect answer
+
+Observation:
+AI follows prompt instructions even if unrealistic
+Limitation: Can be influenced by prompts
+
+
+Key Findings:
+
+1. AI struggles with:
+	Ambiguity
+	Contradictions
+	Nonsensical inputs
+
+2.AI is strong in:
+	Language generation
+	Basic reasoning

@@ -1,0 +1,32 @@
+Semantic Meaning: Find 5 word pairs and explain semantic similarity.
+
+Semantic similarity refers to how closely related the meanings of two words are.
+Words with similar meaning → High similarity
+Words with different meaning → Low similarity
+
+Word Pairs with Explanation
+
+1. Happy – Joyful
+Both words express positive emotions
+Joyful is a stronger form of happy
+Similarity: Very High
+
+2. Big – Large
+Both describe size
+Can be used interchangeably in most contexts
+Similarity: Very High
+
+3. Smart – Intelligent
+Both relate to mental ability
+Intelligent is more formal than smart
+Similarity: High
+
+4. Fast – Quick
+Both indicate speed
+Quick is often used for actions, fast for speed in general
+Similarity: High
+
+5. Angry – Furious
+Both describe strong negative emotion
+Furious is a more intense form of angry
+Similarity: Very High

@@ -1,0 +1,49 @@
+Image Filter Lab: Use OpenCV to grayscale, blur, detect edges and show before/after.
+
+
+Program:
+
+import cv2
+
+# Load image
+image = cv2.imread("sample.jpg")
+
+# Convert to grayscale
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# Apply Gaussian Blur
+blur = cv2.GaussianBlur(gray, (5, 5), 0)
+
+# Edge Detection (Canny)
+edges = cv2.Canny(blur, 100, 200)
+
+# Show images
+cv2.imshow("Original Image", image)
+cv2.imshow("Grayscale Image", gray)
+cv2.imshow("Blurred Image", blur)
+cv2.imshow("Edge Detection", edges)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+Explanation:
+
+1. Grayscale Conversion
+Converts color image → black & white
+Reduces complexity (3 channels → 1 channel)
+
+2. Blurring (Gaussian Blur)
+Smoothens the image
+Removes noise
+Uses kernel size (5,5)
+
+3. Edge Detection (Canny)
+Detects boundaries of objects
+Uses thresholds: 100 and 200
+
+What You Will Observe?
+  Original Image → Full color
+  Grayscale → Simpler image
+  Blurred → Smooth, less noise
+  Edges → Only outlines visible

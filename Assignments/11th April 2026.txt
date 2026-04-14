@@ -1,0 +1,60 @@
+Detection Brainstorm: List 5 uses of face/object detection and design one solution.
+
+5 Uses of Face/Object Detection
+
+1. Face Unlock in Smartphones
+-Used for secure authentication
+-Detects and verifies user’s face
+
+2. CCTV Surveillance
+-Detects suspicious people or activities
+-Improves security and monitoring
+
+3. Attendance System
+-Automatically marks attendance
+-Saves time and avoids proxy
+
+4. Self-Driving Cars
+-Detects vehicles, pedestrians, traffic signs
+-Ensures safe driving
+
+5. Shopping & Retail Analytics
+-Tracks customer behavior
+-Helps improve sales and store layout
+
+
+Designing One Solution
+
+Smart Face Attendance System
+
+Problem Statement:Manual attendance is time-consuming and can lead to errors or proxy attendance.
+
+Proposed Solution
+
+Develop a system that:
+
+1.Detects faces using a camera
+2.Recognizes students
+3.Automatically marks attendance
+
+Working Steps
+1.Capture image using webcam
+2.Detect face using OpenCV
+3.Compare with stored database
+4.Mark attendance in file/database
+
+Technologies Used
+1.Python
+2.OpenCV
+3.Face Recognition Library
+4.CSV / Database
+
+Expected Output
+1.Student face detected
+2.Name displayed
+3.Attendance marked automatically
+
+Advantages
+1.Saves time
+2.Accurate
+3.No proxy attendance

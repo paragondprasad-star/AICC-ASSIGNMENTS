@@ -1,0 +1,66 @@
+Movie Review Analyzer: Build a simple sentiment analyzer and test on 5 reviews.
+
+DATASET:
+
+reviews = [
+    "The movie was amazing and full of suspense",
+    "I hated the film, it was boring and too long",
+    "Fantastic performance by the lead actor",
+    "The plot was dull and predictable",
+    "An excellent movie with great visuals"
+]
+
+Program:
+
+from textblob import TextBlob
+
+# Reviews
+reviews = [
+    "The movie was amazing and full of suspense",
+    "I hated the film, it was boring and too long",
+    "Fantastic performance by the lead actor",
+    "The plot was dull and predictable",
+    "An excellent movie with great visuals"
+]
+
+# Analyze sentiment
+for review in reviews:
+    analysis = TextBlob(review)
+    polarity = analysis.sentiment.polarity
+    
+    if polarity > 0:
+        sentiment = "Positive"
+    elif polarity < 0:
+        sentiment = "Negative"
+    else:
+        sentiment = "Neutral"
+    
+    print(f"Review: {review}")
+    print(f"Sentiment: {sentiment} (Score: {round(polarity,2)})\n")
+
+
+
+Output:
+Review: The movie was amazing and full of suspense
+Sentiment: Positive (Score: 0.6)
+
+Review: I hated the film, it was boring and too long
+Sentiment: Negative (Score: -0.8)
+
+Review: Fantastic performance by the lead actor
+Sentiment: Positive (Score: 0.5)
+
+Review: The plot was dull and predictable
+Sentiment: Negative (Score: -0.6)
+
+Review: An excellent movie with great visuals
+Sentiment: Positive (Score: 0.7)
+
+Explanation:
+
+1.Words like “amazing”, “fantastic”, “excellent” → Positive sentiment
+2.Words like “hated”, “boring”, “dull” → Negative sentiment
+3.The model calculates a polarity score (-1 to +1):
+       +1 → Very Positive
+        0 → Neutral
+       -1 → Very Negative

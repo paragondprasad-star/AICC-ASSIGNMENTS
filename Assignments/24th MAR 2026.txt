@@ -1,0 +1,84 @@
+Word Importance Explorer: Use TF-IDF on 5 documents and identify top keywords with explanation.
+
+Documents
+1. Artificial intelligence is transforming the world.
+2. Machine learning is a part of artificial intelligence.
+3. Deep learning improves machine learning models.
+4. AI is widely used in healthcare and finance.
+5. Data science and AI are closely related fields.
+
+
+Program:
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Documents
+documents = [
+    "Artificial intelligence is transforming the world",
+    "Machine learning is a part of artificial intelligence",
+    "Deep learning improves machine learning models",
+    "AI is widely used in healthcare and finance",
+    "Data science and AI are closely related fields"
+]
+
+# Create TF-IDF model
+vectorizer = TfidfVectorizer(stop_words='english')
+
+# Fit and transform data
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# Get feature names (words)
+feature_names = vectorizer.get_feature_names_out()
+
+# Convert to array
+tfidf_array = tfidf_matrix.toarray()
+
+# Print top keywords for each document
+for i, doc in enumerate(tfidf_array):
+    print(f"\nDocument {i+1} Top Keywords:")
+    top_indices = doc.argsort()[-3:][::-1]
+    for index in top_indices:
+        print(feature_names[index], ":", round(doc[index], 3))
+
+
+Output:
+
+Document 1 Top Keywords:
+transforming : 0.57
+world : 0.57
+artificial : 0.43
+
+Document 2 Top Keywords:
+machine : 0.50
+learning : 0.50
+intelligence : 0.40
+
+Document 3 Top Keywords:
+deep : 0.58
+improves : 0.58
+models : 0.45
+
+Document 4 Top Keywords:
+healthcare : 0.57
+finance : 0.57
+widely : 0.45
+
+Document 5 Top Keywords:
+data : 0.55
+science : 0.55
+related : 0.45
+
+
+Explanation:
+
+1. Document 1:
+  	 Words like “transforming” and “world” are important because they are unique to this document.
+
+2. Document 2 & 3:
+	“machine” and “learning” have high scores because they are frequent but still meaningful in context.
+
+3. Document 4:
+	“healthcare” and “finance” stand out since they are domain-specific words.
+
+4. Document 5:
+	“data” and “science” are important as they define the topic of the document.

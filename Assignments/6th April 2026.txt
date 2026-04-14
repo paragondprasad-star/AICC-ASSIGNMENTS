@@ -1,0 +1,58 @@
+Image as Numbers: Load an image, print shape, pixel values, channels, and explain them.
+
+Program:
+
+import cv2
+
+# Load image
+image = cv2.imread("sample.jpg")
+
+# Print shape
+print("Shape of image:", image.shape)
+
+# Print pixel values at (0,0)
+print("Pixel value at (0,0):", image[0, 0])
+
+# Print number of channels
+print("Number of channels:", image.shape[2])
+
+Output:
+
+Shape of image: (300, 400, 3)
+Pixel value at (0,0): [255 0 0]
+Number of channels: 3
+
+
+Explanation:
+
+1. Shape of Image
+Format: (Height, Width, Channels)
+Example: (300, 400, 3)
+300 → height (rows)
+400 → width (columns)
+3 → color channels
+
+2. Pixel Values
+Each pixel has values between 0 to 255
+Example: [255, 0, 0]
+Represents color intensity
+In OpenCV:
+Order = BGR (Blue, Green, Red)
+
+3. Channels
+3 channels → Color image (RGB/BGR)
+1 channel → Grayscale image
+
+How It Works:
+Image = 3D array (matrix)
+Example:
+[
+  [[B,G,R], [B,G,R], ...],
+  [[B,G,R], [B,G,R], ...]
+]
+
+Applications:
+Computer Vision
+Image Processing 
+Face Recognition
+Self-driving cars

@@ -1,0 +1,50 @@
+Prompt Engineer: Write prompts for resume, business idea, study plan and compare weak vs strong prompts.
+
+
+
+Prompt Engineering is the skill of writing clear, specific, and structured instructions to get the best response from an AI model.
+
+1. Resume Prompt
+Weak Prompt:
+“Make my resume”
+
+Strong Prompt:
+“Create a professional resume for a final-year Electronics and Communication Engineering student with skills in Python, Java, and basic Full Stack development. Include sections: education, skills, projects, strengths, and career objective.”
+
+Comparison:
+Weak → Too vague
+Strong → Clear role, skills, and structure
+
+
+2. Business Idea Prompt
+Weak Prompt:
+“Give me a business idea”
+
+Strong Prompt:
+“Suggest 3 low-investment business ideas suitable for a college student in India, preferably in the water bottle or eco-friendly product niche. Include cost, target customers, and profit potential.”
+
+Comparison:
+Weak → No direction
+Strong → Specific context and requirements
+
+3. Study Plan Prompt
+Weak Prompt:
+“Make a study plan”
+
+Strong Prompt:
+“Create a 4-week study plan for learning Python basics for a beginner. Include daily topics, practice tasks, and revision time, assuming 2 hours per day.”
+
+Comparison:
+Weak → No timeline or goal
+Strong → Structured and realistic
+
+4. Project Prompt
+Weak Prompt:
+“Give project ideas”
+
+Strong Prompt:
+“Suggest 5 mini-project ideas for an Electronics and Communication Engineering student interested in AI and FPGA, with simple explanations and required tools.”
+
+Comparison:
+Weak → Too general
+Strong → Tailored to domain and interest
